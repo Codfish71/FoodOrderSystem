@@ -3,6 +3,7 @@ package com.restaurant.project.admin.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +17,7 @@ import com.restaurant.project.food.entity.Food;
 import com.restaurant.project.menu.entity.Menu;
 
 @RestController
+@CrossOrigin(origins="http://localhost:4200")
 public class AdminController {
 	@Autowired
 	private AdminService adminService;
@@ -35,7 +37,7 @@ public class AdminController {
 	}
 
 	@PostMapping("/admin/login")
-	public String loginAdmin(@RequestBody Admin admin) throws Exception {
+	public Admin loginAdmin(@RequestBody Admin admin) throws Exception {
 		Admin adminFromDb = null;
 		String tempAdminEmail = admin.getAdmin_email();
 		String tempAdminPassword = admin.getAdmin_password();
@@ -45,7 +47,7 @@ public class AdminController {
 		if(adminFromDb == null) {
 			throw new Exception("Bad Credentials");
 		}
-		return "Hello " + adminFromDb.getAdmin_name();
+		return adminFromDb;
 	}
 
 	@GetMapping("/admin/menus")
