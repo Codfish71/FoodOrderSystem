@@ -1,4 +1,4 @@
-# FoodOrderSystem
+# Food Order System
 Full stack application of food ordering system using angular and sprinboot
 
 
@@ -23,5 +23,8 @@ First clone the repository using command
 #### npm install
 #### npm install bootstrap
 #### npm install jquery
+
+### import the backend project folder into your eclipse as a maven project
+### Go to applicaion.properties file in src/resoruces to configure your DataBase, SQL queries
 
 
