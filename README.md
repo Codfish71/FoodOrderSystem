@@ -23,7 +23,9 @@ First clone the repository using command
 #### npm install
 #### npm install bootstrap
 #### npm install jquery
+### ng serve
 
+## Backend
 ### import the backend project folder into your eclipse as a maven project
 ### Go to applicaion.properties file in src/resoruces to configure your DataBase, SQL queries
 
