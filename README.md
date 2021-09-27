@@ -8,6 +8,7 @@ Project is created with:
 * Java 8
 * Spring Boot
 * Angular
+* TypeScript
 * Bootstrap
 * HTML CSS
 
