@@ -16,7 +16,8 @@ Project is created with:
 To run this project, install it locally using npm:
 First clone the repository using command 
 
-### git clone https://github.com/Codfish71/FoodOrderSystem 
+Change the branch to master branch and then clone master repository 
+### git clone https://github.com/Codfish71/FoodOrderSystem
 
 ### then go to root folder of frontend and open CMD and type
 ## 
