@@ -1,0 +1,13 @@
+<div class="container">
+  <h3 class="col-md-3">Welcome {{ customerEmail }}</h3>
+  <button class="btn btn-warning col-md-3" (click)="logoutCustomer()">
+    Logout
+  </button>
+  <button class="btn btn-warning col-md-3 offset-1" (click)="viewProfile()">
+    View Profile
+  </button>
+</div>
+
+<app-menu-items></app-menu-items>
+
+<app-food-items></app-food-items>

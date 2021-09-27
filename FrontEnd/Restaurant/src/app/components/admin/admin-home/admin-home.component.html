@@ -1,0 +1,21 @@
+<div class="container">
+  <br />
+
+  <h3 class="col-md-4">Welcome {{ adminEmail }}</h3>
+  <button class="btn btn-warning" (click)="logoutAdmin()">Logout</button>
+
+  <hr />
+  <h3>Avaialble list of menus</h3>
+  <hr />
+  <div class="container" style="border: 1px solid #333">
+    <app-admin-menu></app-admin-menu>
+    <br />
+  </div>
+  <br />
+
+  <div class="container" style="border: 1px solid #333">
+    <app-admin-food></app-admin-food>
+    <br />
+  </div>
+  <br />
+</div>

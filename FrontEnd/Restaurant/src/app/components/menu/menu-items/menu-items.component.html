@@ -1,0 +1,31 @@
+<div class="container" style="border: 1px solid #333">
+  <h3>List of available menus</h3>
+  <div class="container row" style="text-transform: capitalize">
+    <div
+      class="col-md-3 ml-sm-auto col-lg-4 pt-5 px-4"
+      *ngFor="let menu of menus"
+    >
+      <div class="card">
+        <div class="card-body">
+          <img
+            src="{{ menu.menu_image }}"
+            class="card-img-top"
+            alt=""
+            style="width: 250px; height: 250px"
+          />
+          <h5 class="card-title">{{ menu.menu_name }}</h5>
+          <p class="card-text">{{ menu.menu_description }}</p>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasTop"
+            aria-controls="offcanvasTop"
+          >
+            See details
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

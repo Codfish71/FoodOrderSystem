@@ -1,0 +1,10 @@
+In Front end root directory 
+npm install
+
+npm install bootstrap
+npm install jquery
+
+import bootstrap in styles variable of app.module.ts as
+styles :[
+	'./node_modules/bootstrap/dist/css/bootstrap.min.css'	
+]

@@ -1,0 +1,28 @@
+body {
+  background-repeat: no-repeat;
+  background-size: 1600px 700px;
+}
+
+@media (min-width: 576px) {
+  .container {
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+  }
+}
+@media (min-width: 992px) {
+  .container {
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+  }
+}

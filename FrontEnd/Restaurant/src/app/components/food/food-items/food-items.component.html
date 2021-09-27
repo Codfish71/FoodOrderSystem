@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="container row" style="margin-top: 20px; border: 1px solid #333">
+    <div class="container">
+      <hr />
+      <h3>
+        Cart
+        <span *ngIf="isEmpty == false"
+          >(It is and empty cart please select food items to order)</span
+        >
+      </h3>
+
+      <hr />
+      <div class="card" *ngFor="let cartItem of foodCart">
+        <div class="card-body">
+          <h5 class="card-title">{{ cartItem.food_name }}</h5>
+          <p class="card-text">
+            {{ cartItem.food_description }}
+          </p>
+          <p class="card-text">{{ cartItem.price }} $</p>
+          <button class="btn btn-danger" (click)="deleteItemFromCart(cartItem)">
+            Delete Item
+          </button>
+        </div>
+      </div>
+      <div class="container row">
+        <h3 class="col-md-3">Total Price = {{ totalPrice }}</h3>
+        <button class="btn btn-success col-md-3" (click)="placeOrder()">
+          Place order
+        </button>
+      </div>
+      <br />
+    </div>
+
+    <h3>Avaialble list of Food Items</h3>
+    <hr />
+
+    <div
+      class="row col-md-3 ml-sm-auto col-lg-4 pt-5 px-4"
+      *ngFor="let foodItem of foodItems"
+    >
+      <div
+        class="card"
+        style="width: 18rem; height: 32rem; text-transform: capitalize"
+      >
+        <img
+          src="{{ foodItem.food_image }}"
+          class="card-img-top"
+          alt="..."
+          style="
+            width: 250px;
+            height: 250px;
+            margin-top: 10px;
+            margin-left: 10px;
+          "
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ foodItem.food_description }}</h5>
+          <hr />
+          <h5 class="card-title">Category : {{ foodItem.category }}</h5>
+
+          <p class="card-text">
+            {{ foodItem.food_name }}
+          </p>
+          <h3>{{ foodItem.price }} $</h3>
+          <button class="btn btn-primary" (click)="addToCart(foodItem)">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br />

@@ -1,0 +1,106 @@
+<div class="container row">
+  <div
+    class="col-md-3 ml-sm-auto col-lg-4 pt-5 px-4"
+    *ngFor="let menu of menus"
+  >
+    <div class="card" style="text-transform: capitalize">
+      <div class="card-body">
+        <img
+          src="{{ menu.menu_image }}"
+          class="card-img-top"
+          alt=""
+          style="width: 250px; height: 250px"
+        />
+        <h5 class="card-title">{{ menu.menu_name }}</h5>
+        <p class="card-text">{{ menu.menu_description }}</p>
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#exampleModal"
+        >
+          See details
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content p-4">
+      <button
+        type="button"
+        class="close x"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="modal-header border-0 mb-2">
+        <h5 class="modal-title" id="exampleModalLabel">Daily</h5>
+        <button type="button" class="close" aria-label="Close" disabled="true">
+          <span aria-hidden="true">Log in</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3 class="mb-4 title">New<br />Account</h3>
+        <div class="form-group">
+          <input
+            type="text"
+            id="name"
+            class="form-control p-0"
+            required
+            style="box-shadow: none; border-radius: 0px"
+          />
+          <label class="form-control-placeholder p-0" for="name lbl"
+            >Full Name</label
+          >
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            id="email"
+            class="form-control p-0"
+            required
+            style="box-shadow: none; border-radius: 0px"
+          />
+          <label class="form-control-placeholder p-0" for="name">Email</label>
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            id="password"
+            class="form-control p-0"
+            required
+            style="box-shadow: none; border-radius: 0px"
+          />
+          <label class="form-control-placeholder p-0" for="password"
+            >Password</label
+          >
+        </div>
+        <label class="tc"
+          >By signing up I accept the <strong>Terms & Conditions</strong> of
+          Daily</label
+        >
+      </div>
+      <div class="modal-footer border-0 mb-4">
+        <button
+          type="button"
+          class="btn signup col-6 col-md-6"
+          data-dismiss="modal"
+        >
+          SIGNUP
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
