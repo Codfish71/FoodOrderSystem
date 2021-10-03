@@ -1,6 +1,6 @@
 # Food Order System
 Full stack application of food ordering system using angular and sprinboot
-
+Author : Prathamesh Pendal
 
 
 ## Technologies
